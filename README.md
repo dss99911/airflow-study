@@ -1,6 +1,9 @@
 # Study
 - [ ] [Tutorial](https://airflow.apache.org/docs/apache-airflow/stable/tutorial.html)
 
+# Install
+- [x] [Local Install](https://airflow.apache.org/docs/apache-airflow/stable/start/local.html)
+
 # Libraries
 ```shell
 pip install apache-airflow

@@ -1,4 +1,4 @@
-from bash_operator import *
+from operators.bash_operator import *
 
 # support markdown only
 dag.doc_md = __doc__

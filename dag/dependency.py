@@ -1,6 +1,6 @@
 from airflow.models.baseoperator import chain
 
-from bash_operator import *
+from operators.bash_operator import *
 
 t1.set_downstream(t2)
 
@@ -32,4 +32,4 @@ t1 >> [t2, t3]
 tasks = [
     t1, t2, t3
 ]
-chain(*tasks) # t1 -> t2 -> t3
+chain(t4, *tasks) # t4 -> t1 -> t2 -> t3

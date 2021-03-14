@@ -2,8 +2,7 @@
 
 # Operators; we need this to operate!
 from airflow.operators.bash import BashOperator
-from dag import *
-
+from operators.dags import *
 dag = makeDag("bash_operator")
 
 # t1, t2 and t3 are examples of tasks created by instantiating operators
@@ -16,7 +15,7 @@ t1 = BashOperator(
 t2 = BashOperator(
     task_id='sleep',
     depends_on_past=False,
-    bash_command='sleep 5',
+    bash_command='sleep 1',
     retries=3,
     dag=dag,
 )
@@ -56,3 +55,5 @@ t5 = BashOperator(
     # without template(need space in the end)
     bash_command="/home/batcher/test.sh ",
     dag=dag)
+
+t1 >> t2 >> t3

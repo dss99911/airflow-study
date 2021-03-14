@@ -59,6 +59,16 @@ airflow tasks test tutorial print_date 2015-06-21
 ----
 * the date is execution date. when use `{{ ds }}`, this date is printed
 
+[source,bash]
+.use parameter
+----
+airflow tasks test example_passing_params_via_test_command run_this <date> -t '{"foo":"bar"}'
+
+airflow tasks test example_passing_params_via_test_command run_this <date> --env-vars '{"foo":"bar"}
+----
+* refer to link:../dag/test.py[]]
+
+
 === Test dag
 [source,bash]
 ----

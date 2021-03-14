@@ -37,7 +37,8 @@
 
 . Trigger DAG
 
- If to run manually is required, call this
+ If to run manually is required, call this to add schedule to scheduler
+ If DAG is paused, then this is not running.
 
 . Backfill old dates
 +

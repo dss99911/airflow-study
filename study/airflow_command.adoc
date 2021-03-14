@@ -1,0 +1,67 @@
+= Airflow Command
+
+* initialize the database tables
+[source,bash]
++
+----
+airflow db init
+----
+
+* print the list of active DAGs
++
+[source,bash]
+----
+airflow dags list
+----
+
+* prints the list of tasks in the "tutorial" DAG
++
+[source,bash]
+----
+airflow tasks list tutorial
+----
++
+.Output
+....
+print_date
+sleep
+templated
+....
+
+
+* prints the hierarchy of tasks in the "tutorial" DAG
++
+[source,bash]
+----
+airflow tasks list tutorial --tree
+----
++
+.Output
+....
+<Task(BashOperator): print_date>
+    <Task(BashOperator): sleep>
+    <Task(BashOperator): templated>
+
+....
+
+== Test
+
+=== Test python grammar
+[source,bash]
+----
+python dag/tutorial.py
+----
+
+=== Test each task
+[source,bash]
+----
+airflow tasks test tutorial print_date 2015-06-21
+----
+* the date is execution date. when use `{{ ds }}`, this date is printed
+
+=== Test dag
+[source,bash]
+----
+airflow dags test tutorial 2015-06-21
+----
+

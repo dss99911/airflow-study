@@ -1,0 +1,15 @@
+= Template Dictionary
+:imagesdir: ./img
+
+* Able to use on BaseOperator and Python Operator
+
+{{ ds }} :: today’s “date stamp”
+{{ macros.ds_add(ds, 7)}} :: add 7 days from today
+{{ params.my_param }} :: get params. refer to link:../dag/bash_operator.py[]
+{{ run_id }} :: TODO just id?
+{{ dag_run }} :: it can be submitted via users in the Web UI
+{{ dag_run.conf }} :: when running DAG by manually, able to input this.
+* usage : {{ dag_run.conf["example_key"] if dag_run else "" }}
++
+image::image-2021-03-14-02-01-12-494.png[]
+

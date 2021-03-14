@@ -1,0 +1,13 @@
+= Config
+
+
+* https://airflow.apache.org/docs/apache-airflow/stable/howto/set-config.html[Set Config]
+** set as an environment variable(normal, command, secret)
+** set in airflow.cfg (normal, command, secret)
+** Airflow’s built in defaults
+* https://airflow.apache.org/docs/apache-airflow/stable/configurations-ref.html[Configuration Reference]
+
+.airflow.cfg
+****
+dags_folder :: dag python file path. If add dag file. then airflow recognize it
+****

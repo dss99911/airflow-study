@@ -1,0 +1,22 @@
+= Setup Database
+
+https://airflow.apache.org/docs/apache-airflow/stable/howto/set-up-database.html[Setup database]
+
+
+. configure Database
+
+sql_alchemy_conn ::
+metadata database for managing DAGs
+* ex) sql_alchemy_conn = mysql://user-name:password@database-url:3306/DATABASE-NAME
+* ex) sql_alchemy_conn = sqlite://tmp/airflow/airflow.db
+* https://docs.sqlalchemy.org/en/14/core/engines.html[database urls]
+
+
+. initialize
++
+[source,bash]
+----
+airflow db init
+----
+
+

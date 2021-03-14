@@ -1,0 +1,59 @@
+= How to Add/Update/Run DAG
+:sectnums:
+
+== Find DAG path & Copy python file to the path
+
+. Airflow Website -> Admin -> Configuration
+. the page mentioned configuration file path (file name is `airflow.cfg`)
+. search `dags_folder` on `airflow.cfg`. It's DAG path
+. copy to the path
+
+== Load/Reload DAG file
+
+. Check loading interval on `airflow.cfg`
+    min_file_process_interval:: TODO 정확히 뭐하는건진 잘 모르겠음.
+    dag_dir_list_interval:: dag dir을 스캔하는 간격.
+
+. Wait until the interval for DAG is shown on the list
+
+
+    # Number of seconds after which a DAG file is parsed. The DAG file is parsed every
+    # ``min_file_process_interval`` number of seconds. Updates to DAGs are reflected after
+    # this interval. Keeping this number low will increase CPU usage.
+    min_file_process_interval = 30
+
+    # How often (in seconds) to scan the DAGs directory for new files. Default to 5 minutes.
+    dag_dir_list_interval = 300
+
+
+. If DAG is already added and just source code is changed, Then able to refresh DAG on DAGs webpage
+
+== Run DAG
+
+. Unpause DAG
+
+ When DAG is added, it's pause status. unpause to start scheduler
+ Then, DAG is processed from start_date to now.
+
+. Trigger DAG
+
+ If to run manually is required, call this
+
+. Backfill old dates
++
+[source,bash]
+----
+airflow dags backfill tutorial --start-date 2021-03-01 --end-date 2021-03-15
+airflow dags backfill tutorial -s 2021-03-01 -e 2021-03-15
+----
+
+
+
+== Stop DAG
+
+Unpause DAG to turn off the scheduler
+
+== Delete DAG
+
+. Delete DAG - When file scanning, DAG is added again with pause staus
+. Delete DAG file

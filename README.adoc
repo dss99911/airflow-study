@@ -10,11 +10,13 @@
 ****
 * [x] https://airflow.apache.org/docs/apache-airflow/stable/tutorial.html[Tutorial]
 * [x] https://airflow.apache.org/docs/apache-airflow/stable/tutorial_taskflow_api.html#[Tutorial Taskflow Api]
-* [ ] https://airflow.apache.org/docs/apache-airflow/stable/howto/index.html[How-To Guides]
+* [x] Sample DAG
+* [x] https://airflow.apache.org/docs/apache-airflow/stable/howto/index.html[How-To Guides]
+
+
 * [ ] https://airflow.apache.org/docs/apache-airflow/stable/concepts.html#concepts-xcom[XComs]
 * [ ] built-in parameters and macros
 * [ ] https://jinja.palletsprojects.com/[Jinja templating]
-* [ ] https://airflow.apache.org/docs/apache-airflow/stable/macros-ref.html[Macro]
 * [ ] https://airflow.apache.org/docs/apache-airflow/stable/concepts.html#concepts[Concepts]
 * [ ] https://airflow.apache.org/docs/apache-airflow/stable/security/index.html[Security]
 * [ ] https://airflow.apache.org/docs/apache-airflow/stable/executor/kubernetes.html#kubernetesexecutor-architecture[Kubernetes Executor Architecture]
@@ -25,6 +27,9 @@
 * link:study/airflow_command.adoc[Airflow Command]
 * link:study/how_to_add_update_run_dag.adoc[How to Add/Update/Rund]
 * link:study/setup_db.adoc[Setup Metadata Database]
+* link:study/connections.adoc[Connections]
+* link:study/macros.adoc[Macros]
+* link:study/dag_cron.adoc[DAG Cron]
 ****
 
 == Libraries
@@ -42,17 +47,7 @@ Operator가 Task를 시작시킴
 
 == Questions
 
-* start_date=days_ago(2) :2일전에 시작한다는건 무슨 얘기?
-* interval 규칙
-* airflow backfill
-** To backfill access Airflow docker container and run (Usage Manual에 있음)
-* docker로 돌릴 때 및 local로 돌릴 때, custom python library 어떻게 연동하지?
-** `from settings.utils import (add_scala_steps, slack_failed_notification)
-* for endfor 구문은 어떤 template engine의 구문이지? BaseOperator의 bash_command에 입력되는데..
 * schedule_interval=None인데, 어떻게 데일리 스케줄링이 되는거지?
-* list를 downstream으로 하면, 두개의 테스크가 동시에 수행되는 건지?
-* startDate를 과거로 설정하면, scheduling을 시작했을 때 backfill도 되는건지?
-* 처음에 DAG추가되면, pause상태인데, resume하면 자동으로 스케줄링해서 시작되는지? 만약 주기를 하루로 하면, 하루후에 실행되는지 바로 실행되는지. 바로 실행하고 싶으면 어떻게 해야 하는지?
 * Database는 Sqlite로도 충분하지 않을지? Dag관리를 위해서만 쓰는 듯한데.
 * Airflow도 cluster위에서 돌아가고, 여러 worker들이 존재해서, 병렬 다중처리를 지원하는 것 같고, Kubernetes도 지원하는 것 같은데, 현재 우리는, spark를 호출하는데 사용하고, EMR에서 분산처리 할 수 있게 해놨는데, Airflow에서 지원하는 분산처리를 사용할 필요가 있는지?
 

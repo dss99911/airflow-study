@@ -1,0 +1,5 @@
+= Connections
+
+* https://airflow.apache.org/docs/apache-airflow/stable/howto/connection.html[Connections]
+
+lower-case characters and separate words with underscores

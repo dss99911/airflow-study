@@ -1,6 +1,7 @@
 = Template Dictionary
 :imagesdir: ./img
 
+* https://airflow.apache.org/docs/apache-airflow/stable/macros-ref.html
 * Able to use on BaseOperator and Python Operator
 
 {{ ds }} :: today’s “date stamp”

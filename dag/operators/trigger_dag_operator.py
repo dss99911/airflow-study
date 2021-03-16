@@ -1,6 +1,6 @@
 from airflow.operators.trigger_dagrun import TriggerDagRunOperator
 
-from dags import *
+from operators.dags import *
 
 # trigger other dag
 with makeDag("trigger_dag_operator") as dag:

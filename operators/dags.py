@@ -13,6 +13,8 @@ from airflow.utils.dates import days_ago
 # You can override them on a per-task basis during operator initialization
 from airflow.utils.task_group import TaskGroup
 
+from third_party.slack_notification import slack_failed_notification
+
 default_args = {
     'owner': 'airflow',
 
@@ -39,7 +41,7 @@ default_args = {
     # 'dag': dag,
     # 'sla': timedelta(hours=2),
     # 'execution_timeout': timedelta(seconds=300),
-    # 'on_failure_callback': some_function,
+    'on_failure_callback': slack_failed_notification,
     # 'on_success_callback': some_other_function,
     # 'on_retry_callback': another_function,
     # 'sla_miss_callback': yet_another_function,

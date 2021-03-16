@@ -63,4 +63,12 @@ pull = PythonOperator(
     python_callable=puller,
 )
 
+BashOperator(
+    task_id='templated',
+    depends_on_past=False,
+    bash_command="{{ task_instance.xcom_pull('other_task_id', key='return_value')[0] }}",
+    params={'my_param': 'Parameter I passed in'},
+    dag=dag,
+)
+
 pull << [push1, push2]

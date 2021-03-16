@@ -1,7 +1,6 @@
 # https://airflow.apache.org/docs/apache-airflow/stable/howto/operator/bash.html
 
 # Operators; we need this to operate!
-from airflow.operators.bash import BashOperator
 from operators.dags import *
 dag = makeDag("bash_operator")
 

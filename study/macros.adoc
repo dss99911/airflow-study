@@ -6,7 +6,7 @@
 
 {{ ds }} :: today’s “date stamp”
 {{ macros.ds_add(ds, 7)}} :: add 7 days from today
-{{ params.my_param }} :: get params. refer to link:../dag/bash_operator.py[]
+{{ params.my_param }} :: get params. refer to link:../common/bash_operator.py[]
 {{ run_id }} :: TODO just id?
 {{ dag_run }} :: it can be submitted via users in the Web UI
 {{ dag_run.conf }} :: when running DAG by manually, able to input this.

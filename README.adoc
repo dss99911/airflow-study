@@ -12,7 +12,7 @@
 * [x] https://airflow.apache.org/docs/apache-airflow/stable/tutorial_taskflow_api.html#[Tutorial Taskflow Api]
 * [x] Sample DAG
 * [x] https://airflow.apache.org/docs/apache-airflow/stable/howto/index.html[How-To Guides]
-
+* [ ] https://airflow.apache.org/docs/apache-airflow/stable/best-practices.html[Best Practice]
 
 * [ ] https://airflow.apache.org/docs/apache-airflow/stable/concepts.html#concepts-xcom[XComs]
 * [ ] built-in parameters and macros
@@ -38,18 +38,6 @@
 pip install apache-airflow
 pip install apache-airflow-providers-amazon
 ----
-
-== Knowledges
-----
-Operator, Task, DAG
-Operator가 Task를 시작시킴
-----
-
-== Questions
-
-* schedule_interval=None인데, 어떻게 데일리 스케줄링이 되는거지?
-* Database는 Sqlite로도 충분하지 않을지? Dag관리를 위해서만 쓰는 듯한데.
-* Airflow도 cluster위에서 돌아가고, 여러 worker들이 존재해서, 병렬 다중처리를 지원하는 것 같고, Kubernetes도 지원하는 것 같은데, 현재 우리는, spark를 호출하는데 사용하고, EMR에서 분산처리 할 수 있게 해놨는데, Airflow에서 지원하는 분산처리를 사용할 필요가 있는지?
 
 == Reference
 

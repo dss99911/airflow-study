@@ -7,6 +7,16 @@
 
 == Study
 
+* link:study/config.adoc[Config]
+* link:study/airflow_command.adoc[Airflow Command]
+* link:study/how_to_add_update_run_dag.adoc[How to Add/Update/Rund]
+* link:study/setup_db.adoc[Setup Metadata Database]
+* link:study/connections.adoc[Connections]
+* link:study/macros.adoc[Macros]
+* link:study/dag_cron.adoc[DAG Cron]
+
+== TODO
+
 ****
 * [x] https://airflow.apache.org/docs/apache-airflow/stable/tutorial.html[Tutorial]
 * [x] https://airflow.apache.org/docs/apache-airflow/stable/tutorial_taskflow_api.html#[Tutorial Taskflow Api]
@@ -23,13 +33,7 @@
 * [ ] https://aws.amazon.com/ko/datapipeline/[AWS Data Pipeline]
 ** If use AWS EMR, consider to use Data Pipeline if you use simple scheduling
 
-* link:study/config.adoc[Config]
-* link:study/airflow_command.adoc[Airflow Command]
-* link:study/how_to_add_update_run_dag.adoc[How to Add/Update/Rund]
-* link:study/setup_db.adoc[Setup Metadata Database]
-* link:study/connections.adoc[Connections]
-* link:study/macros.adoc[Macros]
-* link:study/dag_cron.adoc[DAG Cron]
+
 ****
 
 == Libraries

@@ -14,6 +14,7 @@
 * link:study/connections.adoc[Connections]
 * link:study/macros.adoc[Macros]
 * link:study/dag_cron.adoc[DAG Cron]
+* link:study/api.adoc[Rest API]
 
 == TODO
 

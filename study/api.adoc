@@ -1,0 +1,9 @@
+[source,bash]
+----
+curl -X POST \
+http://127.0.0.1/api/experimental/dags/dag-name/dag_runs \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -d '{"conf":"{\"cluster_id\":\"j-12BBBARO2087F\", \"date\":\"2021-04-25\"}"}'
+----
+

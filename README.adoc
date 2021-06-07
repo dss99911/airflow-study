@@ -33,7 +33,7 @@
 * [ ] https://airflow.apache.org/docs/apache-airflow/stable/executor/kubernetes.html#kubernetesexecutor-architecture[Kubernetes Executor Architecture]
 * [ ] https://aws.amazon.com/ko/datapipeline/[AWS Data Pipeline]
 ** If use AWS EMR, consider to use Data Pipeline if you use simple scheduling
-
+* [ ] Oozie : ui상에서 그래프를 만들 수 있다고 함
 
 ****
 

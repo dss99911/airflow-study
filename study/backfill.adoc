@@ -1,0 +1,6 @@
+= Backfill
+
+https://forum.astronomer.io/t/backfilling-guidelines/273
+
+- airflow backfill command
+- by UI (특정 과거 시점에서 호출할 경우.)

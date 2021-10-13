@@ -3,4 +3,9 @@
 https://forum.astronomer.io/t/backfilling-guidelines/273
 
 - airflow backfill command
-- by UI (특정 과거 시점에서 호출할 경우.)
+[source,bash]
+----
+airflow backfill features_uid -s 2019-02-01 -e 2019-09-09
+----
+* by UI (특정 과거 시점에서 호출할 경우.)
+** browse -> DAG runs -> create -> input dag and date
